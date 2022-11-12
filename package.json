@@ -1,9 +1,9 @@
 {
   "name": "jogos-que-eu-ja-fui",
   "version": "0.1.0",
+  "homepage": "https://viniroveri.github.io/JogosQueEuJaFui/",
   "private": true,
   "type": "module",
-  "homepage": "https://viniroveri.github.io/JogosQueEuJaFui/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
