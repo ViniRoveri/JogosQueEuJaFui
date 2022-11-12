@@ -11,7 +11,7 @@ const AppRouter = ()=>{
     <Router>
         <Header/>
         <Routes>
-            <Route path='/'>
+            <Route path='/JogosQueEuJaFui'>
                 <Route index element={<Home/>}/>
                 <Route path='jogos' element={<Jogos/>}/>
                 <Route path='estatisticas' element={<Estatisticas/>}/>
