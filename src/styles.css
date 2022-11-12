@@ -1,0 +1,124 @@
+@import url('./reset.css');
+@import url('./css/animacoes.css');
+@import url('./css/campoPesquisa.css');
+@import url('./css/header-footer.css');
+@import url('./css/home.css');
+@import url('./css/jogos.css');
+@import url('./css/estatisticas.css');
+@import url('./css/infoJogo.css');
+@import url('./css/notFound.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Inter:wght@400;700&display=swap');
+
+:root{
+    --branco: #eee;
+    --cinza-claro: #444;
+    --cinza-escuro: #222;
+    --verde-claro: #4E9F3D;
+    --verde: green;
+    --verde-escuro: #1E5128;
+    --fonteTexto: 'Inter', sans-serif;
+    --fonteTitulo: 'Allerta Stencil', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,th,td{
+    color: var(--branco);
+    font-family: var(--fonteTexto);
+    text-decoration: none;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    background-attachment: fixed;
+    background-image: url(./img/Background.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+main{
+    margin: 0 auto;
+    max-width: 1150px;
+    min-height: calc(100vh - 123px);
+    padding: 8px 16px;
+}
+
+
+.titulo{
+    color: var(--branco);
+    display: inline-block;
+    font-family: var(--fonteTitulo);
+    font-size: 50px;
+    margin: 32px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.invisivel{
+    display: none;
+}
+
+::-webkit-scrollbar {
+	height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--cinza-escuro);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: var(--verde);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--verde-escuro);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration{
+    appearance: none;
+    -webkit-appearance:none;
+    display: none;
+}
+
+@media (min-width:375px){
+    .titulo{
+        font-size: 61px;
+    }
+}
+
+@media (min-width:426px){
+    .titulo{
+        font-size: 71px;
+    }
+}
+
+@media (min-width:569px){
+    main{
+        min-height: calc(100vh - 90px);
+        padding: 16px 32px;
+    }
+}
+
+@media (min-width:1024px){
+    .titulo{
+        font-size: 100px;
+    }
+}
+
+@media (min-width:1441px){
+    .titulo{
+        font-size: 104px;
+        margin: 64px auto;
+    }
+}

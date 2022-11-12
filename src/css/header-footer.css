@@ -1,0 +1,142 @@
+.header{
+    height: 83px;
+    text-align: center;
+    transition: all .4s ease-out;
+    width: 100%;
+}
+
+.header-topo{
+    background: linear-gradient(-90deg,var(--verde-escuro),var(--verde-claro));
+    height: 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-logo{
+    height: 50px;
+}
+
+.nav{
+    background: linear-gradient(-90deg,var(--verde-escuro),var(--verde-claro));
+    transition: all .4s ease-out;
+    width: 100%;
+}
+
+.nav-fechado{
+    transform: translateY(-85px);
+}
+
+.nav-aberto{
+    transform: translateY(50px);
+}
+
+.nav-item{
+    font-size: 20px;
+    height: 45px;
+    padding: 12px 0;
+    transition: all .4s ease-out;
+}
+
+.nav-item:hover{
+    font-size: 19px;
+}
+
+a.nav-item-ativo{
+    color: #bbb;
+}
+
+.nav-seta{
+    cursor: pointer;
+    height: 33px;
+    padding: 8px 0;
+}
+
+.nav-item,.nav-seta{
+    border-top: solid 1px var(--verde-claro);
+    display: block;
+    width: 100%;
+}
+
+.footer{
+    align-items: center;
+    background-color: var(--verde-escuro);
+    display: flex;
+    height: 40px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.footer-logo{
+    height: 100%;
+}
+
+.footer-texto{
+    font-size: 12px;
+}
+
+.footer-texto::before{
+    content: "© ";
+}
+
+@media (min-width:569px){
+    .header{
+        align-items: center;
+        background: linear-gradient(-90deg,var(--verde-escuro),var(--verde-claro));
+        display: flex;
+        height: 50px;
+        justify-content: space-around;
+    }
+
+    .header-topo{
+        background: none;
+        position: unset;
+        width: unset;
+        z-index: unset;
+    }
+
+    .nav{
+        align-items: center;
+        background: unset;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        width: 50%;
+    }
+    
+    .nav-fechado{
+        transform: translateY(0);
+    }
+    
+    .nav-aberto{
+        transform: translateY(0);
+    }
+
+    .nav-item{
+        font-size: 20px;
+        height: unset;
+        padding: auto 0;
+    }
+
+    .nav-item:nth-child(1){
+        width: 28%;
+    }
+    .nav-item:nth-child(2){
+        border-left: 1px solid var(--verde-claro);
+        border-right: 1px solid var(--verde-claro);
+        width: 30%;
+    }
+    .nav-item:nth-child(3){
+        width: 42%;
+    }
+
+    .nav-seta{
+        display: none;
+    }
+
+    .nav-item{
+        border-top: unset;
+        display: inline-block;
+        width: unset;
+    }
+}

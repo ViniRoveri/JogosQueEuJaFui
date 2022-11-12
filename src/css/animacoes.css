@@ -1,0 +1,122 @@
+@keyframes animaTitulo{
+    0%{
+        opacity: 0;
+        transform: translateX(-12px);
+    }
+    90%{
+        opacity: 100%;
+        transform: translateX(4px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+.animaTitulo1{
+    animation: animaTitulo .2s ease-out forwards;
+}
+
+.animaTitulo2{
+    animation: animaTitulo .2s ease-out forwards .2s;
+}
+
+.animaTitulo3{
+    animation: animaTitulo .2s ease-out forwards .4s;
+}
+
+.animaTitulo4{
+    animation: animaTitulo .2s ease-out forwards .6s;
+}
+
+.animaTitulo5{
+    animation: animaTitulo .2s ease-out forwards .8s;
+    display: inline-block;
+    opacity: 0;
+}
+
+.animaTitulo1,.animaTitulo2,.animaTitulo3,.animaTitulo4{
+    display: inline-block;
+    margin-right: 1rem;
+    opacity: 0;
+}
+
+@keyframes animaSubtitulo{
+    0%{
+        opacity: 0;
+        transform: translateX(12px);
+    }
+    90%{
+        opacity: 100%;
+        transform: translateX(-4px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+.animaSubtituloHome{
+    animation: animaSubtitulo .2s ease-out forwards 1.2s;
+    opacity: 0;
+}
+
+.animaSubtitulo{
+    animation: animaSubtitulo .2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes animaTexto{
+    0%{
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    90%{
+        opacity: 100%;
+        transform: translateY(-4px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+.animaTextoHome1{
+    animation: animaTexto .2s ease-out forwards 1.4s;
+}
+
+.animaTextoHome2{
+    animation: animaTexto .2s ease-out forwards 1.6s;
+}
+
+.animaTextoHome3{
+    animation: animaTexto .2s ease-out forwards 1.8s;
+}
+
+.animaTextoHome4{
+    animation: animaTexto .2s ease-out forwards 2s;
+}
+
+.animaTexto1{
+    animation: animaTexto .2s ease-out forwards .2s;
+}
+
+.animaTexto2{
+    animation: animaTexto .2s ease-out forwards .4s;
+}
+
+.animaTexto3{
+    animation: animaTexto .2s ease-out forwards .6s;
+}
+
+.animaTexto4{
+    animation: animaTexto .2s ease-out forwards .8s;
+}
+
+.animaTexto5{
+    animation: animaTexto .2s ease-out forwards 1s;
+}
+
+.animaTexto1,.animaTexto2,.animaTexto3,.animaTexto4,.animaTexto5,.animaTextoHome1,.animaTextoHome2,.animaTextoHome3,.animaTextoHome4{
+    opacity: 0;
+}

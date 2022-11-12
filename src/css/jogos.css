@@ -1,0 +1,115 @@
+.jogos-titulo{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px 0;
+    text-align: right;
+}
+
+.jogos-textos{
+    font-size: 24px;
+    line-height: 1.12;
+    margin-bottom: 16px
+}
+
+.jogos-textos p{
+    margin-bottom: 8px;
+}
+
+.jogos-pesquisa{
+    margin-bottom: 32px;
+}
+
+.jogos-cards{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 16px;
+}
+
+.jogos-card{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: .5rem;
+    max-width: 327px;
+    text-align: center;
+    width: 100%;
+}
+
+.card-imagem{
+    width: 100%;
+}
+
+.card-conteudo{
+    background-color: var(--verde-escuro);
+    line-height: 1.27;
+    padding: .5rem;
+    width: 100%;
+}
+
+.card-titulo{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.card-texto{
+    font-size: 16px;
+}
+
+.jogos-aviso{
+    font-size: 26px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+@media (min-width:375px){
+    .jogos-titulo{
+        font-size: 39px;
+    }
+
+    .jogos-textos{
+        font-size: 29px;
+    }
+    
+    .card-titulo{
+        font-size: 21px;
+    }
+
+    .card-texto{
+        font-size: 20px;
+    }
+
+    .jogos-aviso{
+        font-size: 31px;
+    }
+}
+
+@media (min-width:426px){
+    .jogos-titulo{
+        font-size: 45px;
+    }
+
+    .jogos-textos{
+        font-size: 34px;
+    }
+
+    .jogos-aviso{
+        font-size: 36px;
+    }
+}
+
+@media (min-width:769px){
+    .jogos-titulo{
+        font-size: 47px;
+    }
+
+    .jogos-textos{
+        font-size: 36px;
+    }
+
+    .jogos-aviso{
+        font-size: 38px;
+    }
+}
