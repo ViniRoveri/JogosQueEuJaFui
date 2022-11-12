@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import {HashRouter as Router,Routes,Route} from 'react-router-dom'
 import Footer from './components/footer'
 import Header from './components/header'
 import Estatisticas from './pages/Estatisticas'
@@ -11,7 +11,7 @@ const AppRouter = ()=>{
     <Router>
         <Header/>
         <Routes>
-            <Route path='/JogosQueEuJaFui'>
+            <Route path='/'>
                 <Route index element={<Home/>}/>
                 <Route path='jogos' element={<Jogos/>}/>
                 <Route path='estatisticas' element={<Estatisticas/>}/>
