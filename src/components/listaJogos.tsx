@@ -19,7 +19,10 @@ const ListaJogos = () => {
     return (
         <>
         {[...dataApi].reverse().map((jogo:intJogo)=>(
-        <Link to={`/infoJogo/${jogo.codigo}`} key={jogo.codigo} className="jogos-card" onClick={()=>document.querySelector('a.nav-item-ativo').classList.remove('nav-item-ativo')}>
+        <Link to={`/infoJogo/${jogo.codigo}`} key={jogo.codigo} className="jogos-card" onClick={()=>{
+            document.querySelector('a.nav-item-ativo').classList.remove('nav-item-ativo')
+            window.scrollTo(0,0)
+        }}>
             <img src={`img/Thumbs/Thumb-${jogo.codigo.slice(0,-2)}.png`} alt="" className="card-imagem"/>
             <div className="card-conteudo">
                 <h2 className="card-titulo">{`${jogo.timeCasa} ${jogo.golsCasa} x ${jogo.golsFora} ${jogo.timeFora}`}</h2>

@@ -37,6 +37,7 @@ input[type=search]{
     border: 1px solid var(--verde-claro);
     border-bottom-right-radius: 22px;
     border-top-right-radius: 22px;
+    cursor: pointer;
     height: 100%;
     outline: none;
     padding: 0 4px 0 0;

@@ -5,6 +5,7 @@ import Estatisticas from './pages/Estatisticas'
 import Home from './pages/Home'
 import InfoJogo from './pages/InfoJogo'
 import Jogos from './pages/Jogos'
+import NotFound from './pages/NotFound'
 
 const AppRouter = ()=>{
     return(
@@ -16,6 +17,7 @@ const AppRouter = ()=>{
                 <Route path='jogos' element={<Jogos/>}/>
                 <Route path='estatisticas' element={<Estatisticas/>}/>
                 <Route path='infoJogo/:codigo' element={<InfoJogo/>}/>
+                <Route path='*' element={<NotFound/>}/>
             </Route>
         </Routes>
         <Footer/>

@@ -65,6 +65,7 @@ const CampoPesquisa = (props:intProps)=>{
             e.preventDefault()
             localStorage.setItem('pesquisa',pesquisa)
             navigate('/jogos')
+            document.querySelector('a.nav-item-ativo').classList.remove('nav-item-ativo')
         }}>
             <input type={props.type} placeholder={props.placeholder} className="pesquisa-campo" style={props.type==='text'?{borderBottomRightRadius: '22px',borderTopRightRadius: '22px'}:{}} onChange={e=>{
                 setPesquisa(e.target.value)

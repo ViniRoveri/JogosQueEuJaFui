@@ -8,7 +8,7 @@ const Header = ()=>{
     const [aberturaHeader,setAberturaHeader] = useState('fechado')
     const [itemAtivo,setItemAtivo] = useState(window.location.pathname)
     useEffect(()=>{
-        setItemAtivo(window.location.pathname)
+        setItemAtivo(window.location.hash)
     })
 
     return(
@@ -17,17 +17,17 @@ const Header = ()=>{
                 <img src={Logo} alt="Logo Vini Roveri" className='header-logo'/>
             </div>
             <nav className={`nav nav-${aberturaHeader}`}>
-                <Link to='/' className={`nav-item ${itemAtivo==='/'?'nav-item-ativo':''}`} onClick={()=>{
+                <Link to='/' className={`nav-item ${itemAtivo==='#/'?'nav-item-ativo':''}`} onClick={()=>{
                     setAberturaHeader('fechado')
-                    setItemAtivo('/')
+                    setItemAtivo('#/')
                 }}>Home</Link>
-                <Link to='/jogos' className={`nav-item ${itemAtivo==='/jogos'?'nav-item-ativo':''}`} onClick={()=>{
+                <Link to='/jogos' className={`nav-item ${itemAtivo==='#/jogos'?'nav-item-ativo':''}`} onClick={()=>{
                     setAberturaHeader('fechado')
-                    setItemAtivo('/jogos')
+                    setItemAtivo('#/jogos')
                 }}>Jogos</Link>
-                <Link to='/estatisticas' className={`nav-item ${itemAtivo==='/estatisticas'?'nav-item-ativo':''}`} onClick={()=>{
+                <Link to='/estatisticas' className={`nav-item ${itemAtivo==='#/estatisticas'?'nav-item-ativo':''}`} onClick={()=>{
                     setAberturaHeader('fechado')
-                    setItemAtivo('/estatisticas')
+                    setItemAtivo('#/estatisticas')
                 }}>Estatísticas</Link>
                 <div className="nav-seta" onClick={()=>setAberturaHeader(aberturaHeader==='fechado'?'aberto':'fechado')}>
                     <ArrowDown className={aberturaHeader==='aberto'?'invisivel':''}/>
