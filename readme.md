@@ -1,4 +1,4 @@
-![Foto da tela inicial](./src/img/Capa-Site.png)
+![Foto da tela inicial](./src/img/Capa-JQEJF.png)
 
 # Jogos Que Eu Já Fui ([Link do site](https://viniroveri.github.io/JogosQueEuJaFui/#/))
 
