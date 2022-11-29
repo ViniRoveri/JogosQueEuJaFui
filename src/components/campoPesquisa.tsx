@@ -64,7 +64,7 @@ const CampoPesquisa = (props:intProps)=>{
         <form className='pesquisa-caixa' onSubmit={e=>{
             e.preventDefault()
             localStorage.setItem('pesquisa',pesquisa)
-            navigate('/#/jogos')
+            navigate('/jogos')
             document.querySelector('a.nav-item-ativo').classList.remove('nav-item-ativo')
         }}>
             <input type={props.type} placeholder={props.placeholder} className="pesquisa-campo" style={props.type==='text'?{borderBottomRightRadius: '22px',borderTopRightRadius: '22px'}:{}} onChange={e=>{
