@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/JogosQueEuJaFui/static/css/main.4b1476ca.css",
-    "main.js": "/JogosQueEuJaFui/static/js/main.91b2ec40.js",
+    "main.js": "/JogosQueEuJaFui/static/js/main.12e80c70.js",
     "static/media/Background.png": "/JogosQueEuJaFui/static/media/Background.38e102dcc8ea81552af0.png",
     "static/media/ImagemNotFound.png": "/JogosQueEuJaFui/static/media/ImagemNotFound.9ad84d914c6d045183fa.png",
     "static/media/Logo-Vini-Roveri-100.png": "/JogosQueEuJaFui/static/media/Logo-Vini-Roveri-100.5d4a609db88d3ca32ab8.png",
@@ -10,10 +10,10 @@
     "static/media/Arrow-Down.svg": "/JogosQueEuJaFui/static/media/Arrow-Down.a723da7a52f018bf75ffcfa1fedf224c.svg",
     "static/media/Lupa.svg": "/JogosQueEuJaFui/static/media/Lupa.9229c27a06c425502b2dab071201c91a.svg",
     "main.4b1476ca.css.map": "/JogosQueEuJaFui/static/css/main.4b1476ca.css.map",
-    "main.91b2ec40.js.map": "/JogosQueEuJaFui/static/js/main.91b2ec40.js.map"
+    "main.12e80c70.js.map": "/JogosQueEuJaFui/static/js/main.12e80c70.js.map"
   },
   "entrypoints": [
     "static/css/main.4b1476ca.css",
-    "static/js/main.91b2ec40.js"
+    "static/js/main.12e80c70.js"
   ]
 }
