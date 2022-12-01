@@ -58,7 +58,7 @@ const CampoPesquisa = (props:intProps)=>{
                 localStorage.clear()
             },110)
         }
-    },[])
+    })
 
     return(
         <form className='pesquisa-caixa' onSubmit={e=>{
