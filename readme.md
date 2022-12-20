@@ -15,23 +15,6 @@ Este site foi criado para servir como um acervo de todas as informações, dados
 
 ## Quais desafios eu tive que superar?
 
-- ### Problemas para fazer a aplicação ser full-stack
-
-Como alguém especializado no front-end eu só havia utilizado APIs com `Node`, `Express` e `Mongoose` em raros projetos de estudos, portanto eu tive que ir descobrindo os problemas de se fazer um front-end integrado com o back-end conforme o desenvolvimento, entre estes que eu tive que achar solução estão:
-
-- ##### Fazer o Axios consultar os dados da API
-
-O MongoDB ainda não oferece um suporte para se fazer requisições `HTTP` como `GET`, `POST`, `PUT` e `DELETE` direto na database, portanto eu precisei entrar com o advento do Express para subir um servidor localmente onde eu pudesse fazer tais consultas. Porém como um servidor local, ele só resolvia as coisas localmente, e isso me levou ao segundo problema:
-
-- ##### Deixar os dados da API públicos para requisições
-
-Após pesquisas eu descobri que ao colocar arquivos `.json` no ar via o GitHub Pages era possível fazer requisições `GET` usando o link que leva à página do arquivo. Sabendo disso, e tendo acesso aos dados da API localmente, eu utilizo o `fs.writeFile()` para criar um arquivo em um diretório separado e colocar tal diretório no GitHub Pages a fim de obter os links. Porém isto só me deu acesso ao `GET`, agora eu precisava encontrar um jeito de lidar com todas as outras requisições.
-
-- ##### Criar uma interface para controle local da API
-
-Como eu já estava com acesso completo à API localmente, e também já tinha achado um jeito de deixar os dados consultáveis, o único passo que faltou foi fazer o meio de campo para que minhas alterações na API local fossem refletidas na API pública. Pra isso eu criei um interface onde apenas eu consigo modificar dados da API através de todas requisições `HTTP`, e sempre que a interface identifica uma atualização ela usa novamente o `fs.writeFile` para atualizar o arquivo responsável pel API pública com os dados atualizados. Após isto basta fazer um `push` no repósitório dos arquivos `.json` que a API pública é atualizada e as consultas já funcionam normalmente.
-
-
 - ### Fazer pesquisas na Home, página de Jogos e página de Estatísticas funcionarem
 
 O primeiro passo que eu tomei foi na página de jogos, pois eu sabia que fazendo funcionar alí bastava derivar o código nas outras páginas para elas funcionarem também.
@@ -42,7 +25,7 @@ O caminho que eu tomei foi de capturar o input do usuário na barra de pesquisa 
 
 - ##### Na página Home
 
-Agora o papel era levar a pesquisa do usuário da Home para a página de Jogos. Para isso eu também capturo o input via `useState` e adiciono uma função `onSubmit` que: Copia o input do usuário para o `localStorage`; Navega o usuário para a página de Jogos; Cola o input armazenado na barra de pesquisa e limpa o localStorage; Executa a `Função` que filtra os cards usando o input recém adquirido.
+Agora o papel era levar a pesquisa do usuário da Home para a página de Jogos. Para isso eu também capturo o input via `useState` e adiciono uma função `onSubmit` que: Copia o input do usuário para o `atom` do Recoil; Navega o usuário para a página de Jogos; Cola o input armazenado na barra de pesquisa e limpa o `atom`; Executa a função que filtra os cards usando o input recém adquirido.
 
 - ##### Na página de Estatísticas
 

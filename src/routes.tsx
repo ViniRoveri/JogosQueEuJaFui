@@ -1,4 +1,5 @@
 import {HashRouter as Router,Routes,Route} from 'react-router-dom'
+import { RecoilRoot } from 'recoil'
 import Footer from './components/footer'
 import Header from './components/header'
 import Estatisticas from './pages/Estatisticas'
@@ -10,17 +11,19 @@ import NotFound from './pages/NotFound'
 const AppRouter = ()=>{
     return(
     <Router>
-        <Header/>
-        <Routes>
-            <Route path='/'>
-                <Route index element={<Home/>}/>
-                <Route path='jogos' element={<Jogos/>}/>
-                <Route path='estatisticas' element={<Estatisticas/>}/>
-                <Route path='infoJogo/:codigo' element={<InfoJogo/>}/>
-                <Route path='*' element={<NotFound/>}/>
-            </Route>
-        </Routes>
-        <Footer/>
+        <RecoilRoot>
+            <Header/>
+            <Routes>
+                <Route path='/'>
+                    <Route index element={<Home/>}/>
+                    <Route path='jogos' element={<Jogos/>}/>
+                    <Route path='estatisticas' element={<Estatisticas/>}/>
+                    <Route path='infoJogo/:codigo' element={<InfoJogo/>}/>
+                    <Route path='*' element={<NotFound/>}/>
+                </Route>
+            </Routes>
+            <Footer/>
+        </RecoilRoot>
     </Router>
 )}
 

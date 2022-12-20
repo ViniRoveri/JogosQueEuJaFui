@@ -1,9 +1,15 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import CampoPesquisa from "../components/campoPesquisa"
-import { claEstatisticasTime, intJogo } from "../interfaces"
+import { claEstatisticasTime, intJogo } from "../common/interfaces"
+import { useSetPaginaAtual } from "../common/hooks"
 
 const Estatisticas = () => {
+	const setPaginaAtual = useSetPaginaAtual()
+    useEffect(()=>{
+        setPaginaAtual('estatisticas')
+    },[])
+	
 	let dataApi:Array<intJogo> = []
 	const [totalJogos,setTotalJogos] = useState(0)
 

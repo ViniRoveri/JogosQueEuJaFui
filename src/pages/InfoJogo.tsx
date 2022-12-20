@@ -1,9 +1,15 @@
 import axios from "axios"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { intJogo } from "../interfaces"
+import { useSetPaginaAtual } from "../common/hooks"
+import { intJogo } from "../common/interfaces"
 
 const InfoJogo = ()=>{
+    const setPaginaAtual = useSetPaginaAtual()
+    useEffect(()=>{
+        setPaginaAtual('')
+    },[])
+    
     const [retorno,setRetorno] = useState(<></>)
     const params = useParams()
     const codigoUrl = params.codigo

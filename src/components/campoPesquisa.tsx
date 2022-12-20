@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import {ReactComponent as Lupa} from '../img/Lupa.svg'
 import { useNavigate } from "react-router-dom"
+import { usePesquisaHome, useSetPesquisaHome } from '../common/hooks'
 
 interface intProps{
     placeholder:string
@@ -10,7 +11,10 @@ interface intProps{
 
 const CampoPesquisa = (props:intProps)=>{
     const navigate = useNavigate()
-    const [pesquisa,setPesquisa] = useState('')
+    const pesquisaHome = usePesquisaHome()
+    const setPesquisaHome = useSetPesquisaHome()
+
+    const [pesquisa,setPesquisa] = useState(pesquisaHome)
 
     function fazPesquisa(pesquisa:string){
         let regex = new RegExp(pesquisa,'i')
@@ -31,7 +35,7 @@ const CampoPesquisa = (props:intProps)=>{
         })
 
         document.querySelectorAll('tbody tr').forEach(tr=>{
-            if(pesquisa===''){
+            if(pesquisa === ''){
                 tr.classList.remove('invisivel')
             }else{
                 if(regex.test(tr.firstChild.textContent)){
@@ -44,32 +48,25 @@ const CampoPesquisa = (props:intProps)=>{
     }
 
     useEffect(()=>{
-        fazPesquisa(pesquisa)
+        setTimeout(()=>{
+            fazPesquisa(pesquisa)
+            
+            setPesquisaHome('')
+        },100)
     },[])
-
+    
     useEffect(()=>{
-        if(localStorage.getItem('pesquisa')){
-            setPesquisa(localStorage.getItem('pesquisa'))
-            setTimeout(()=>{
-                fazPesquisa(localStorage.getItem('pesquisa'))
-                window.scrollTo({top:83,behavior:'smooth'})
-            },100)
-            setTimeout(()=>{
-                localStorage.clear()
-            },110)
-        }
-    })
+        fazPesquisa(pesquisa)
+    },[pesquisa])
 
     return(
         <form className='pesquisa-caixa' onSubmit={e=>{
             e.preventDefault()
-            localStorage.setItem('pesquisa',pesquisa)
+            setPesquisaHome(pesquisa)
             navigate('/jogos')
-            document.querySelector('a.nav-item-ativo').classList.remove('nav-item-ativo')
         }}>
             <input type={props.type} placeholder={props.placeholder} className="pesquisa-campo" style={props.type==='text'?{borderBottomRightRadius: '22px',borderTopRightRadius: '22px'}:{}} onChange={e=>{
                 setPesquisa(e.target.value)
-                fazPesquisa(e.target.value)
                 if(props.setAtualizaAvisoEstatisticas){props.setAtualizaAvisoEstatisticas(e.target.value)}
             }} value={pesquisa}/>
             {props.type==='search'?

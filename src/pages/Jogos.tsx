@@ -1,7 +1,14 @@
+import { useEffect } from "react"
+import { useSetPaginaAtual } from "../common/hooks"
 import CampoPesquisa from "../components/campoPesquisa"
 import ListaJogos from "../components/listaJogos"
 
 const Jogos = ()=>{
+    const setPaginaAtual = useSetPaginaAtual()
+    useEffect(()=>{
+        setPaginaAtual('jogos')
+    },[])
+
     return(
         <main className="mainJogos">
             <h1 className="jogos-titulo animaSubtitulo">Jogos</h1>

@@ -1,9 +1,14 @@
 import { useEffect } from "react"
+import { useSetPaginaAtual, useSetPesquisaHome } from "../common/hooks"
 import CampoPesquisa from "../components/campoPesquisa"
 
 const Home = ()=>{
+    const setPaginaAtual = useSetPaginaAtual()
+    const setPesquisaHome = useSetPesquisaHome()
+
     useEffect(()=>{
-        localStorage.clear()
+        setPaginaAtual('home')
+        setPesquisaHome('')
     },[])
 
     return(
@@ -28,7 +33,7 @@ const Home = ()=>{
                 <h2 className='pesquisaHome-titulo animaTextoHome2'>Faça uma pesquisa no site:</h2>
                 <p className='pesquisaHome-texto animaTextoHome3'>Pesquise por Times, Campeonatos, Estádios ou Datas!</p>
                 <div className="animaTextoHome4">
-                    <CampoPesquisa type="search"  placeholder="Pesquise Aqui!"/>
+                    <CampoPesquisa type="search" placeholder="Pesquise Aqui!"/>
                 </div>
             </section>
         </main>

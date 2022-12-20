@@ -1,7 +1,7 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { memo, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { intJogo } from "../interfaces"
+import { intJogo } from "../common/interfaces"
 
 const ListaJogos = () => {
     const [dataApi,setDataApi] = useState([])
@@ -20,7 +20,6 @@ const ListaJogos = () => {
         <>
         {[...dataApi].reverse().map((jogo:intJogo)=>(
         <Link to={`/infoJogo/${jogo.codigo}`} key={jogo.codigo} className="jogos-card" onClick={()=>{
-            document.querySelector('a.nav-item-ativo').classList.remove('nav-item-ativo')
             window.scrollTo(0,0)
         }}>
             <img src={`img/Thumbs/Thumb-${jogo.codigo.slice(0,-2)}.png`} alt="" className="card-imagem"/>
@@ -37,4 +36,4 @@ const ListaJogos = () => {
     )
 }
 
-export default ListaJogos
+export default memo(ListaJogos)
